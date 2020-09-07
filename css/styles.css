@@ -92,11 +92,32 @@ body {
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
-  transition: color 0.2s linear;
+  transition-duration: 250ms;
 }
 
 .menu-link:hover {
   color: #2196f3;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  top: 54px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196F3;
+  border-radius: 2px;
+  opacity: 0;
+  transition-duration: 250ms;
+}
+
+.menu-link:hover::after {
+  opacity: 1;
 }
 
 .article {
@@ -114,7 +135,7 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
-  transition: color 0.2s linear;
+  transition-duration: 250ms;
 }
 
 .textstyle:not(:last-child) {
@@ -368,6 +389,34 @@ body {
   margin-right: 30px;
 }
 
+.img-blok {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.overlay-text h3 {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  margin: 0;
+}
+
 /* СЕКЦИЯ 3 (Наша Команда) */
 .comand {
   background-color: #f5f4fa;
@@ -463,6 +512,7 @@ body {
   padding: 0px;
   margin-right: 0px;
   fill: #afb1b8;
+  transition-duration: 250ms;
 }
 
 .stylesvg:hover {
@@ -512,6 +562,7 @@ body {
   border-radius: 4px;
   width: 170px;
   height: 90px;
+  transition-duration: 250ms;
 }
 
 .box-client {
@@ -664,7 +715,7 @@ body {
   height: 38px;
   padding: 6px 12px;
   text-decoration: none;
-  transition: color 0.2s linear;
+  transition-duration: 250ms;
 }
 
 .botton:hover {
@@ -706,7 +757,11 @@ body {
 }
 
 .list-port {
+  display: inline-flex;
   margin-right: 30px;
+  transition-duration:
+    cubic-bezier(0.4, 0, 0.2, 1),
+    250ms;
 }
 
 .list-port:hover {
@@ -724,7 +779,6 @@ body {
 }
 
 .container-box {
-  display: inline-block;
   width: 370px;
   height: auto;
   background: #ffffff;
@@ -754,11 +808,62 @@ body {
   margin: 0px 0px;
 }
 
-.container-box div {
+.container-box div:nth-child(2) {
   padding: 20px 24px;
 }
 
-.img-size {
+.overlay-box {
+  position: relative;
+
+}
+
+
+
+.overlay-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  padding: 63px 24px;
+}
+
+.overlay-box:hover::before {
+  opacity: 1;
+}
+
+.overlay-box span {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+
+  opacity: 0;
+
+  padding: 64px 24px;
+}
+
+.overlay-box span:hover {
+  opacity: 1;
+}
+
+.img-size-portfolio {
+
   display: block;
   width: 369px;
 }
