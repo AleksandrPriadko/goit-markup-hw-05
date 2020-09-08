@@ -13,6 +13,16 @@
 </head>
 
 <body>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="but-modal-closed" data-modal-close>
+        <svg class="icon-closed-modal">
+          <use href="./images/icon/socweb/symbol-defs-g.svg#vector">
+          </use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <header class="header">
     <div class="container flexbox">
       <nav class="navigation">
@@ -50,7 +60,7 @@
             <p>для вашего бизнеса</p>
           </h2>
           <div class="flexbox">
-            <a href="" class="btn">Заказать услугу</a>
+            <button class="btn" data-modal-open>Заказать услугу</button>
           </div>
         </div>
       </section>
@@ -373,6 +383,8 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
+
 </body>
 
 </html>

@@ -13,6 +13,16 @@
 </head>
 
 <body>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="but-modal-closed" data-modal-close>
+        <svg class="icon-closed-modal">
+          <use href="./images/icon/socweb/symbol-defs-g.svg#vector">
+          </use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <header class="header">
     <div class="container flexbox">
       <nav class="navigation">
@@ -26,7 +36,7 @@
           <li class="menu-item">
             <a href="./portfolio.html" class="menu-link">Портфолио</a>
           </li>
-          <li class="menu-item"><a href="" class="menu-link">Контакты</a></li>
+          <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
         </ul>
       </nav>
 
@@ -50,7 +60,7 @@
             <p>для вашего бизнеса</p>
           </h2>
           <div class="flexbox">
-            <a href="" class="btn">Заказать услугу</a>
+            <button class="btn" data-modal-open>Заказать услугу</button>
           </div>
         </div>
       </section>
@@ -90,13 +100,25 @@
           <div class="flexbox">
             <ul class="img-box">
               <li class="img-blok">
+                <div class="overlay-text">
+                  <h3>десктопные приложения</h3>
+                </div>
                 <img src="./images/img(4).jpg" alt="Альтернативный текст" />
+
               </li>
               <li class="img-blok">
+                <div class="overlay-text">
+                  <h3>мобильные приложения</h3>
+                </div>
                 <img src="./images/img(5).jpg" alt="Альтернативный текст" />
+
               </li>
               <li class="img-blok">
+                <div class="overlay-text">
+                  <h3>дизайнерские решения</h3>
+                </div>
                 <img src="./images/img(6).jpg" alt="Альтернативный текст" />
+
               </li>
             </ul>
           </div>
@@ -361,6 +383,8 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
